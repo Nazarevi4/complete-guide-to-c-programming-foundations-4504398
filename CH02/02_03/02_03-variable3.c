@@ -1,8 +1,10 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <stdint.h>
 
-int main()
-{
-	char a,b,c,d,e;
+
+int32_t main() {
+	char a, b, c, d, e;
 
 	a = 'H';
 	b = 'e';
@@ -10,7 +12,7 @@ int main()
 	d = 'o';
 	e = '\n';
 
-	printf("%c%c%c%c%c%c",a,b,c,c,d,e);
+	printf("%c%c%c%c%c%c", a, b, c, c, d, e);
 
-	return(0);
+	return EXIT_SUCCESS;
 }

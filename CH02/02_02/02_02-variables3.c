@@ -1,7 +1,9 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <stdint.h>
 
-int main()
-{
+
+int32_t main() {
 	char a = 'X';
 	int count = 25;
 	double longitude = 47.677878;
@@ -9,7 +11,7 @@ int main()
 	printf("%c\n%d\n%f\n",
 			a,
 			count,
-			longitude
-		  );
-	return 0;
+			longitude);
+
+	return EXIT_SUCCESS;
 }

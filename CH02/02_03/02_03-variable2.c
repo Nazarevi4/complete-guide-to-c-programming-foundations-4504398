@@ -1,7 +1,9 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <stdint.h>
 
-int main()
-{
+
+int32_t main() {
 	char a = 'A';
 	int b = 2;
 	float c = 0.25;
@@ -12,5 +14,5 @@ int main()
 	printf("c is %f\n",c);
 	printf("d is %f\n",d);
 
-	return(0);
+	return EXIT_SUCCESS;
 }

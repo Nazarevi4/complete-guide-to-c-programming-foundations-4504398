@@ -1,16 +1,17 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <stdint.h>
 
-char *myname(void)
-{
+
+char *myname(void) {
 	char me[] = "Dan Gookin";
 
-	return(me);
+	return me;
 }
 
-int main()
-{
-	printf("This course's author is %s\n", myname() );
 
-	return(0);
+int32_t main() {
+	printf("This course's author is %s\n", myname());
+
+	return EXIT_SUCCESS;
 }
-

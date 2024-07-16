@@ -1,11 +1,13 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <stdint.h>
 
-int main()
-{
-	int a;
 
-	a = 4+5;
-	printf("4 + 5 = %d\n",a);
+int32_t main() {
+	int32_t a;
 
-	return(0);
+	a = 4 + 5;
+	printf("4 + 5 = %d\n", a);
+
+	return EXIT_SUCCESS;
 }

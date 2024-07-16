@@ -4,7 +4,7 @@
 
 
 char *myname(void) {
-	char me[] = "Dan Gookin";
+	static char me[] = "Dan Gookin";
 
 	return me;
 }

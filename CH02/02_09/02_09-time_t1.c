@@ -1,12 +1,14 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <stdint.h>
 #include <time.h>
 
-int main()
-{
+
+int32_t main() {
 	time_t now;
 
 	time(&now);
-	printf("%s",ctime(&now));
+	printf("%s", ctime(&now));
 
-	return(0);
+	return EXIT_SUCCESS;
 }

@@ -1,9 +1,12 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <stdint.h>
 
-int main()
-{
+
+int32_t main() {
 	char greetings[4] = { 'H', 'i', '\x21', '\0' };
 
 	puts(greetings);
-	return 0;
+
+	return EXIT_SUCCESS;
 }

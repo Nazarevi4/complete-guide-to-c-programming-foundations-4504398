@@ -1,13 +1,15 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <stdint.h>
 
-int main()
-{
-	int a,b;
+
+int32_t main() {
+	int32_t a, b;
 
 	a = 100;
 	b = 7;
 
-	printf("%d / %d = %d\n",a,b,a/b);
+	printf("%d / %d = %f\n", a, b, (float)a / b);
 
-	return(0);
+	return EXIT_SUCCESS;
 }

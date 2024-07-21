@@ -1,21 +1,22 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdint.h>
 
-int main()
-{
-	//declare constant ratio equal to 3/4
-	//declare char a
-	//declare integer b
-	//declare float c
 
-	//assign char
-	//assign integer
-	//assign float
+int32_t main() {
+	const float ratio = (float)3 / 4;
+	char a;
+	int32_t b;
+	float c;
 
-	//output char value, e.g., "the value of variable a is '?'"
-	//output integer value, e.g., "the value of variable b is ??"
-	//output float value, e.g., "the value of variable c is ???.??"
-	//output value of ratio, e.g., "the value of constant ratio is ???.??"
+	a = 'F';
+	b = 42;
+	c = 574.23;
 
-	return 0;
+	printf("The value of variable a is '%c'\n", a);
+	printf("The value of variable b is %d\n", b);
+	printf("The value of variable c is %.2f\n", c);
+	printf("The value of variable ratio is %.2f\n", ratio);
+
+	return EXIT_SUCCESS;
 }

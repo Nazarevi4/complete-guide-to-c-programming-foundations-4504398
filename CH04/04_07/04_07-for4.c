@@ -1,12 +1,12 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <stdint.h>
 
-int main()
-{
-	for(;;)
-	{
+
+int32_t main() {
+	for(;;) {
 		printf("I am eternal ");
 	}
 
-	return(0);
+	return EXIT_SUCCESS;
 }
-

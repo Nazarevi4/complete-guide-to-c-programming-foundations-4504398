@@ -1,14 +1,15 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <stdint.h>
 
-int main()
-{
-	int a;
+
+int32_t main() {
+	int32_t a;
 
 	printf("Select item 1, 2, or 3: ");
-	scanf("%d",&a);
+	scanf("%d", &a);
 
-	switch(a)
-	{
+	switch(a) {
 		case 1:
 			puts("This is the first item");
 			break;
@@ -22,6 +23,5 @@ int main()
 			puts("Invalid choice");
 	}
 
-	return(0);
+	return EXIT_SUCCESS;
 }
-

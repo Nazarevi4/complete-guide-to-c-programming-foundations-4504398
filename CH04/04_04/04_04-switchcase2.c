@@ -1,7 +1,9 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <stdint.h>
 
-int main()
-{
+
+int32_t main() {
 	char a;
 
 	puts("Menu");
@@ -9,10 +11,9 @@ int main()
 	puts("B - Snake Surprise");
 	puts("C - Eyeball Soup");
 	printf("Your choice: ");
-	scanf("%c",&a);
+	scanf("%c", &a);
 
-	switch(a)
-	{
+	switch(a) {
 		case 'A':
 			puts("Delicious! A hearty snack.");
 			break;
@@ -26,6 +27,5 @@ int main()
 			puts("Invalid choice");
 	}
 
-	return(0);
+	return EXIT_SUCCESS;
 }
-

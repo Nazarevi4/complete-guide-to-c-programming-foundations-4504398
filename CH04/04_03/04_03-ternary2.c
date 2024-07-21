@@ -1,13 +1,12 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <stdint.h>
 
-int main()
-{
-	int x;
 
-	for(x=1;x<=10;x++)
-	{
-		printf("%d - %s\n",x,x % 2 ? "odd" : "even");
+int32_t main() {
+	for(uint8_t x = 1; x <= 10; x++) {
+		printf("%d - %s\n", x, x % 2 ? "odd" : "even");
 	}
 
-	return(0);
+	return EXIT_SUCCESS;
 }

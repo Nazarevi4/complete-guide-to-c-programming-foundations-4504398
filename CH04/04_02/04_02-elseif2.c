@@ -1,21 +1,24 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <stdint.h>
 
-int main()
-{
+
+int32_t main() {
 	char a;
 
 	printf("Type a character: ");
-	scanf("%c",&a);
-	if( a >= 'a' && a <= 'z' )
+	scanf("%c", &a);
+
+	if(a >= 'a' && a <= 'z')
 		puts("You typed a lowercase letter");
-	else if( a >= 'A' && a <= 'Z' )
+	else if(a >= 'A' && a <= 'Z')
 		puts("You typed an uppercase letter");
-	else if( a >= '0' && a <= '9' )
+	else if(a >= '0' && a <= '9')
 		puts("You typed a number");
-	else if( a == ' ' )
+	else if(a == ' ')
 		puts("You typed a space");
 	else
-		printf("You typed the %c symbol\n",a);
+		printf("You typed the %c symbol\n", a);
 
-	return(0);
+	return EXIT_SUCCESS;
 }

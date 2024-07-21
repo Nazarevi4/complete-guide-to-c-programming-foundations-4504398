@@ -1,14 +1,12 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <stdint.h>
 
-int main()
-{
-	int a;
 
-	for( a = 0 ; a < 10 ; a++ )
-	{
+int32_t main() {
+	for(uint8_t a = 0 ; a < 10 ; a++) {
 		puts("I must do this 10 times");
 	}
 
-	return(0);
+	return EXIT_SUCCESS;
 }
-

@@ -1,14 +1,17 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <stdint.h>
 
-int main()
-{
-	int a,b;
+
+int32_t main() {
+	int32_t a, b;
 
 	printf("Type a positive value: ");
-	scanf("%d",&b);
-	for( a=0 ; a<b ; a++ )
-		printf("Countdown: %d\n",b-a);
+	scanf("%d", &b);
 
-	return(0);
+	for(a = 0 ; a < b ; a++) {
+		printf("Countdown: %d\n", b - a);
+	}
+
+	return EXIT_SUCCESS;
 }
-

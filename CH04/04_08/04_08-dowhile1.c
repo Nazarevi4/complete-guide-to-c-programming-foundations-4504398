@@ -1,19 +1,18 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <stdint.h>
 
-int main()
-{
-	int a;
+
+int32_t main() {
+	int32_t a;
 
 	printf("Enter a value: ");
-	scanf("%d",&a);
+	scanf("%d", &a);
 
-	do
-	{
+	do {
 		puts("Here we go!");
 		a--;
-	}
-	while(a > 0);
+	} while(a > 0);
 
-	return(0);
+	return EXIT_SUCCESS;
 }
-

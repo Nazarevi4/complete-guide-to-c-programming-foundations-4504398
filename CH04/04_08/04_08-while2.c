@@ -1,16 +1,17 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <stdint.h>
 
-int main()
-{
-	int ch;
+
+int32_t main() {
+	int32_t ch;
 
 	printf("Type '!' to exit: ");
-	while(1)
-	{
+	while(1) {
 		ch = getchar();
-		if( ch=='!' )
-			break;
+	
+		if(ch == '!') { break; }
 	}
 
-	return(0);
+	return EXIT_SUCCESS;
 }

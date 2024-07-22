@@ -1,18 +1,24 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <stdint.h>
 
-int main()
-{
-	int a = 10;
+
+int32_t main() {
+	int32_t a = 10;
 
 here:
-	printf("%d\n",a);
+	printf("%d\n", a);
 	a--;
-	if( a == 4 )
+
+	if(a == 4) {
 		goto there;
-	if( a > 0 )
+	}
+
+	if(a > 0) {
 		goto here;
+	}
+
 there:
 
-	return(0);
+	return EXIT_SUCCESS;
 }
-

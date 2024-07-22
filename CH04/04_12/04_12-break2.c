@@ -1,20 +1,18 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <stdint.h>
 
-int main()
-{
-	int row;
+
+int32_t main() {
 	char column;
 
-	for(row=1;row<=10;row++)
-	{
-		for(column='A';column<='J';column++)
-		{
-			printf("%2d%c   ",row,column);
-			if(column=='E')
-				break;
+	for(uint8_t row = 1; row <= 10; row++) {
+		for(column = 'A'; column <= 'J'; column++) {
+			printf("%2d%c   ", row, column);
+			if(column == 'E') { break; }
 		}
 		putchar('\n');
 	}
 
-	return(0);
+	return EXIT_SUCCESS;
 }

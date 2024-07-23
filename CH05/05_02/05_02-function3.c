@@ -1,7 +1,9 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <stdint.h>
 
-int main()
-{
+
+int32_t main() {
 	puts("Carefully read these directions!");
 	printf("Press any key to continue: ");
 	getchar();
@@ -12,5 +14,5 @@ int main()
 	printf("Press any key to continue: ");
 	getchar();
 
-	return(0);
+	return EXIT_SUCCESS;
 }

@@ -1,13 +1,15 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <stdint.h>
 
-void pressAny(void)
-{
+
+void pressAny(void) {
 	printf("Press any key to continue: ");
 	getchar();
 }
 
-int main()
-{
+
+int32_t main() {
 	puts("Carefully read these directions!");
 	pressAny();
 	puts("Are you sure you read the directions?");
@@ -15,5 +17,5 @@ int main()
 	puts("Okay. I'm sure you're sure.");
 	pressAny();
 
-	return(0);
+	return EXIT_SUCCESS;
 }

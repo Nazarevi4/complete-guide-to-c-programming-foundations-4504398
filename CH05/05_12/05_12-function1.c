@@ -1,19 +1,23 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <stdint.h>
+
 
 void funct(void)
 {
-	int a = 16;
+	int32_t a = 16;
 
-	printf("In funct(), A = %d\n",a);
+	printf("In funct(), A = %d\n", a);
 }
 
-int main()
+
+int32_t main()
 {
-	int a = 10;
+	int32_t a = 10;
 
-	printf("In main(), A = %d\n",a);
+	printf("In main(), A = %d\n", a);
 	funct();
-	printf("In main(), A = %d\n",a);
+	printf("In main(), A = %d\n", a);
 
-	return 0;
+	return EXIT_SUCCESS;
 }

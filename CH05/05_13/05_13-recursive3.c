@@ -1,23 +1,32 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <stdint.h>
 
-void recurse(int v)
+
+void recurse(int32_t v)
 {
-	int a;
+	int32_t a;
 
-	for(a=0;a<v;a++)
+	for( a = 0; a < v; a++ )
+	{
 		putchar('-');
+	}
 	puts("-> Wind-up!");
-	if( v == 10 )
-		return;
-	recurse(v+1);
-	for(a=0;a<v;a++)
+
+	if( v == 10 ) { return; }
+	recurse(v + 1);
+
+	for( a = 0; a < v; a++ )
+	{
 		putchar('-');
+	}
 	puts("-< Unwinding");
 }
 
-int main()
+
+int32_t main()
 {
 	recurse(0);
 
-	return(0);
+	return EXIT_SUCCESS;
 }

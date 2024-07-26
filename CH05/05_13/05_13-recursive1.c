@@ -1,15 +1,19 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <stdint.h>
 
-void recurse(int a)
+
+void recurse(int32_t a)
 {
 	a++;
-	printf("%d\n",a);
+	printf("%d\n", a);
 	recurse(a);
 }
 
-int main()
+
+int32_t main()
 {
 	recurse(0);
 
-	return 0;
+	return EXIT_SUCCESS;
 }

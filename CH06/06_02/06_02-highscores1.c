@@ -1,6 +1,9 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <stdint.h>
 
-int main()
+
+int32_t main()
 {
 	float highscore[5];
 
@@ -11,12 +14,11 @@ int main()
 	highscore[4] = 123.25;
 
 	puts("Here are the high scores:");
-	printf("#1 %.2f\n",highscore[0]);
-	printf("#2 %.2f\n",highscore[1]);
-	printf("#3 %.2f\n",highscore[2]);
-	printf("#4 %.2f\n",highscore[3]);
-	printf("#5 %.2f\n",highscore[4]);
+	printf("#1 %.2f\n", highscore[0]);
+	printf("#2 %.2f\n", highscore[1]);
+	printf("#3 %.2f\n", highscore[2]);
+	printf("#4 %.2f\n", highscore[3]);
+	printf("#5 %.2f\n", highscore[4]);
 
-	return(0);
+	return EXIT_SUCCESS;
 }
-

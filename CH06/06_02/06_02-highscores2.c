@@ -1,9 +1,12 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <stdint.h>
 
-int main()
+
+int32_t main()
 {
 	float highscore[5];
-	int x;
+	int32_t x;
 
 	highscore[0] = 993.86;
 	highscore[1] = 682.01;
@@ -12,9 +15,9 @@ int main()
 	highscore[4] = 123.25;
 
 	puts("Here are the high scores:");
-	for(x=0;x<5;x++)
-		printf("#%d %.2f\n",x+1,highscore[x]);
+	for(x = 0; x < 5; x++) {
+		printf("#%d %.2f\n", x + 1, highscore[x]);
+	}
 
-	return(0);
+	return EXIT_SUCCESS;
 }
-

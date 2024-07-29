@@ -1,22 +1,24 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <stdint.h>
+
 
 void incshow(char array[])
 {
-	int x;
-
-	for(x=0;x<6;x++)
+	for(uint8_t x = 0;x < 6; x++)
 	{
 		array[x]++;
 		putchar(array[x]);
 	}
 }
 
-int main()
+
+int32_t main()
 {
 	char text[] = "Gdkkn ";
 
 	incshow(text);
 	putchar('\n');
 
-	return(0);
+	return EXIT_SUCCESS;
 }

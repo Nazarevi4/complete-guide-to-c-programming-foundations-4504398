@@ -1,12 +1,16 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <stdint.h>
 
-int main()
+
+int32_t main()
 {
 	struct date {
-		int month;
-		int day;
-		int year;
+		int32_t month;
+		int32_t day;
+		int32_t year;
 	};
+
 	struct date birthday;
 
 	birthday.month = 2;
@@ -16,9 +20,7 @@ int main()
 	printf("George Watshington was born on %d/%d/%d\n",
 			birthday.month,
 			birthday.day,
-			birthday.year
-		  );
+			birthday.year);
 
-	return(0);
+	return EXIT_SUCCESS;
 }
-

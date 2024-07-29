@@ -1,4 +1,7 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <stdint.h>
+
 
 void incshow(char a)
 {
@@ -6,14 +9,16 @@ void incshow(char a)
 	putchar(a);
 }
 
-int main()
+
+int32_t main()
 {
 	char text[] = "Gdkkn ";
-	int x;
 
-	for(x=0;x<6;x++)
+	for(uint8_t x = 0; x < 6; x++)
+	{
 		incshow(text[x]);
+	}
 	putchar('\n');
 
-	return(0);
+	return EXIT_SUCCESS;
 }

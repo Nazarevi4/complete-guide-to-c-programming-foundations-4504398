@@ -1,6 +1,9 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <stdint.h>
 
-int main()
+
+int32_t main()
 {
 	struct pixel {
 		int horz;
@@ -12,17 +15,15 @@ int main()
 		{ 100, 100, 'r' },
 		{ 200, 100, 'r' }
 	};
-	int x;
 
-	for(x=0;x<4;x++)
+	for(uint8_t x = 0; x < 4; x++)
 	{
 		printf("Pixel %d: %d, %d =  %c\n",
-				x+1,
+				x + 1,
 				box[x].horz,
 				box[x].vert,
-				box[x].color
-			  );
+				box[x].color);
 	}
 
-	return(0);
+	return EXIT_SUCCESS;
 }

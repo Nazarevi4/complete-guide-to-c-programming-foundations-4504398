@@ -1,5 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdint.h>
+
 
 #define SIZE 32
 
@@ -8,11 +10,12 @@ void output(struct person y);
 
 struct person {
 	char name[SIZE];
-	int id;
+	int32_t id;
 };
 
+
 /* main program */
-int main()
+int32_t main()
 {
 	struct person you;
 
@@ -22,13 +25,27 @@ int main()
 	/* output the structure */
 	output(you);
 
-	return 0;
+	return EXIT_SUCCESS;
 }
+
 
 struct person fill(void)
 {
+	struct person customer;
+
+	printf("Enter your name: ");
+	fgets(customer.name, SIZE, stdin);
+
+	printf("Enter your ID: ");
+	scanf("%d", &customer.id);
+
+	return customer;
 }
+
 
 void output(struct person y)
 {
+	printf("ID %d belongs to %s",
+	    y.id,
+			y.name);
 }

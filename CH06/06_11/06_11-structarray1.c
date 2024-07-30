@@ -1,14 +1,16 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <stdint.h>
 
-int main()
+
+int32_t main()
 {
 	struct pixel {
-		int horz;
-		int vert;
+		int32_t horz;
+		int32_t vert;
 		char color;
 	};
 	struct pixel box[4];
-	int x;
 
 	box[0].horz = 100;
 	box[0].vert = 50;
@@ -23,15 +25,14 @@ int main()
 	box[3].vert = 100;
 	box[3].color = 'r';
 
-	for(x=0;x<4;x++)
+	for(uint8_t x = 0; x < 4; x++)
 	{
 		printf("Pixel %d: %d, %d =  %c\n",
-				x+1,
+				x + 1,
 				box[x].horz,
 				box[x].vert,
-				box[x].color
-			  );
+				box[x].color);
 	}
 
-	return(0);
+	return EXIT_SUCCESS;
 }

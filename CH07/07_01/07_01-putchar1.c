@@ -1,6 +1,9 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <stdint.h>
 
-int main()
+
+int32_t main()
 {
 	putchar('H');
 	putchar('e');
@@ -9,6 +12,5 @@ int main()
 	putchar('o');
 	putchar('\n');
 
-	return(0);
+	return EXIT_SUCCESS;
 }
-

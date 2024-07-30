@@ -1,12 +1,15 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <stdint.h>
 
-int main()
+
+int32_t main()
 {
-	int ch;
+	int32_t ch;
 
 	printf("Type a character: ");
 	ch = getchar();
-	printf("Character '%c' received.\n",ch);
+	printf("Character '%c' received.\n", ch);
 
-	return(0);
+	return EXIT_SUCCESS;
 }

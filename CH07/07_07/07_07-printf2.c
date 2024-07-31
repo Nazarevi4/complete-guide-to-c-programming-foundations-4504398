@@ -1,12 +1,14 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <stdint.h>
 
-int main()
+
+int32_t main()
 {
 	char string[] = "Yet another string literal\n";
 
 	printf("A string literal\n");
 	printf("%s",string);
 
-	return(0);
+	return EXIT_SUCCESS;
 }
-

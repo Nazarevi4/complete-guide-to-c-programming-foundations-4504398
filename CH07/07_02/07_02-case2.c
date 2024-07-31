@@ -1,11 +1,14 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <stdint.h>
 #include <ctype.h>
 
-int main()
+
+int32_t main()
 {
 	char string[] = "My aunt types her email in ALL CAPS.\n";
-	int ch;
-	int x = 0;
+	int32_t ch;
+	int32_t x = 0;
 
 	while( (ch = string[x]) != '\0' )
 	{
@@ -13,5 +16,5 @@ int main()
 		x++;
 	}
 
-	return(0);
+	return EXIT_SUCCESS;
 }

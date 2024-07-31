@@ -1,9 +1,12 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <stdint.h>
 
-int main()
+
+int32_t main()
 {
 	char string[] = "I'm such a handsome program!\n";
-	int a;
+	int32_t a;
 
 	a = 0;
 	while( string[a] != '\0' )
@@ -12,6 +15,5 @@ int main()
 		a++;
 	}
 
-	return(0);
+	return EXIT_SUCCESS;
 }
-

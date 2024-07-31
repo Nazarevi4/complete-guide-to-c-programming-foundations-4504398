@@ -1,14 +1,15 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <stdint.h>
 
-int main()
+
+int32_t main()
 {
 	char string[] = "I'm such a handsome program!\n";
-	int a;
+	int32_t a;
 
 	a = 0;
-	while( putchar(string[a++]) )
-		;
+	while( putchar(string[a++]) );
 
-	return(0);
+	return EXIT_SUCCESS;
 }
-

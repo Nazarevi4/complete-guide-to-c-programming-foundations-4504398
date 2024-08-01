@@ -1,7 +1,10 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <stdint.h>
 #include <string.h>
 
-int main()
+
+int32_t main()
 {
 	char first[16] = "George";
 	char last[16] = "Washington";
@@ -9,7 +12,7 @@ int main()
 
 	/* build the string */
 
-	printf("Pleased to meet you, %s\n",full);
+	printf("Pleased to meet you, %s\n", full);
 
-	return(0);
+	return EXIT_SUCCESS;
 }

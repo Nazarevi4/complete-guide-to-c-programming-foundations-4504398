@@ -1,17 +1,19 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <stdint.h>
 
-int main()
+
+int32_t main()
 {
-	int text[10];
-	int *pt;
+	int32_t text[10];
+	int32_t *pt;
 
 	printf("Type something: ");
-	scanf("%s",text);
-	printf("You typed: %s\n",text);
+	scanf("%s", text);
+	printf("You typed: %s\n", text);
 	pt = text;
-	printf("Address of text = %p\n",text);
-	printf("Address of pt = %p\n",pt);
+	printf("Address of text = %p\n", text);
+	printf("Address of pt = %p\n", pt);
 
-	return(0);
+	return EXIT_SUCCESS;
 }
-

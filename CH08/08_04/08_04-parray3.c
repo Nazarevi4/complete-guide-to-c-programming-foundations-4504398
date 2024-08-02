@@ -1,17 +1,18 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <stdint.h>
 
-int main()
+
+int32_t main()
 {
-	int twos[5] = { 2, 4, 6, 8, 10 };
-	int *pt;
-	int x;
+	int32_t twos[5] = { 2, 4, 6, 8, 10 };
+	int32_t *pt;
 
 	pt = twos;
-	for(x=0;x<5;x++)
+	for(uint8_t x = 0; x < 5; x++)
 	{
-		printf("%p = %p\n",pt+x,&twos[x]);
+		printf("%p = %p\n", pt + x, &twos[x]);
 	}
 
-	return(0);
+	return EXIT_SUCCESS;
 }
-

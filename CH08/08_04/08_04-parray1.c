@@ -1,12 +1,15 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <stdint.h>
 
-int main()
+
+int32_t main()
 {
 	char text[10];
 
 	printf("Type something: ");
-	scanf("%s",text);
-	printf("You typed: %s\n",text);
+	scanf("%s", text);
+	printf("You typed: %s\n", text);
 
-	return(0);
+	return EXIT_SUCCESS;
 }

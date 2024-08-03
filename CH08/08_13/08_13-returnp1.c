@@ -1,22 +1,26 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdint.h>
 
-char *allocate(int size)
+
+char *allocate(uint32_t size)
 {
 	char *p;
 
-	p = malloc(sizeof(char) * size);
+	p = (char*)malloc(sizeof(char) * size);
 	if( p == NULL )
 	{
 		puts("Unable to allocate memory");
 		exit(1);
 	}
-	return(p);
+
+	return (p);
 }
 
-int main()
+
+int32_t main()
 {
-	char *a,*b;
+	char *a, *b;
 
 	printf("Allocating 256 bytes: ");
 	a = allocate(256);
@@ -28,5 +32,6 @@ int main()
 	/* clean-up */
 	free(a);
 	free(b);
-	return(0);
+
+	return EXIT_SUCCESS;
 }

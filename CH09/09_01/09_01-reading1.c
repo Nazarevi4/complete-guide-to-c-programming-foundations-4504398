@@ -1,21 +1,25 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <stdint.h>
 
-int main()
+
+int32_t main()
 {
 	const char filename[] = "sonnet18.txt";
-	FILE *fh;
+	FILE *fh = NULL;
 
 	/* open the file */
-	fh = fopen(filename,"r");
+	fh = fopen(filename, "r");
 	if( fh == NULL )
 	{
-		printf("Unable to read from file %s\n",filename);
+		printf("Unable to read from file %s\n", filename);
 		return(1);
 	}
 	
-	printf("File '%s' opened\n",filename);
+	printf("File '%s' opened\n", filename);
 
 	/* clean-up */
 	fclose(fh);
-	return(0);
+
+	return EXIT_SUCCESS;
 }

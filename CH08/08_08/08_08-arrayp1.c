@@ -1,13 +1,16 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <stdint.h>
 
-int main()
+
+int32_t main()
 {
 	char *veeps[5] = { "Adams", "Jefferson", "Burr", "Clinton", "Gerry" };
-	int x;
 
-	for(x=0;x<5;x++)
-		printf("%s\n",veeps[x]);
+	for(uint8_t x = 0; x < 5; x++)
+	{
+		printf("%s\n", veeps[x]);
+	}
 
-	return(0);
+	return EXIT_SUCCESS;
 }
-

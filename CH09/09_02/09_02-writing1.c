@@ -1,11 +1,14 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <stdint.h>
 
-int main()
+
+int32_t main()
 {
 	FILE *fh;
 
 	/* open/create the file */
-	fh = fopen("output.txt","w");
+	fh = fopen("output.txt", "w");
 	if( fh == NULL )
 	{
 		puts("Failed to create file");
@@ -13,10 +16,10 @@ int main()
 	}
 
 	/* output */
-	fprintf(fh,"Hello there, file!\n");
+	fprintf(fh, "Hello there, file!\n");
 
 	/* close the file */
 	fclose(fh);
 
-	return(0);
+	return EXIT_SUCCESS;
 }

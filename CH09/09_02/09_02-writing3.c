@@ -1,11 +1,14 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <stdint.h>
 
-int main()
+
+int32_t main()
 {
 	FILE *fh;
 
 	/* open the file for appending */
-	fh = fopen("alphabet.txt","a");
+	fh = fopen("alphabet.txt", "a");
 	if( fh == NULL )
 	{
 		puts("Failed to open file");
@@ -13,10 +16,10 @@ int main()
 	}
 
 	/* output */
-	fputc('\n',fh);
+	fputc('\n', fh);
 
 	/* close the file */
 	fclose(fh);
 
-	return(0);
+	return EXIT_SUCCESS;
 }

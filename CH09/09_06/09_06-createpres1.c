@@ -1,13 +1,16 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <stdint.h>
 
-int main()
+
+int32_t main()
 {
 	const char filename[] = "presidents.dat";
 	FILE *fp;
 	struct person {
 		char name[32];
-		int inaguration;
-		int age;
+		int32_t inaguration;
+		int32_t age;
 	} presidents[10] = {
 		{ "George Washington", 1789, 57 },
 		{ "John Adams", 1797, 62 },
@@ -22,11 +25,11 @@ int main()
 	};
 
 	/* open the file */
-	fp = fopen(filename,"w");
+	fp = fopen(filename, "w");
 	if( fp == NULL )
 	{
-		printf("Unable to create %s\n",filename);
-		return(1);
+		printf("Unable to create %s\n", filename);
+		return (1);
 	}
 
 	/* write the 10 structures */
@@ -35,6 +38,5 @@ int main()
 	/* and remember to close */
 	fclose(fp);
 
-	return(0);
+	return EXIT_SUCCESS;
 }
-

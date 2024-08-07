@@ -1,44 +1,52 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <stdint.h>
 
-int filecopy(char *org,char *dup)
+
+int32_t filecopy(char *org,char *dup)
 {
-	FILE *o,*d;
-	int c;
+	FILE *original, *duplicate;
+	int32_t c;
 
 	/* open/create the files */
-	o = fopen(org,"r");
-	d = fopen(dup,"w");
-	if( org==NULL || dup==NULL)
+	original = fopen(org, "r");
+	duplicate = fopen(dup, "w");
+	if( org == NULL || dup == NULL)
 	{
-		return(-1);
+		return (-1);
 	}
 
 	/* read/write to copy the file */
 	while(1)
 	{
-		c = fgetc(o);
-		if( c == EOF )
-			break;
-		fputc(c,d);
+		c = fgetc(original);
+		if( c == EOF ) { break; }
+		fputc(c, duplicate);
 	}
 
 	/* clean-up */
-	fclose(o);
-	fclose(d);
-	return(0);
+	fclose(original);
+	fclose(duplicate);
+
+	return (0);
 }
 
-int main()
+
+int32_t main()
 {
 	char original[] = "beta.txt";
 	char duplicate[] = "betacopy.txt";
-	int r;
+	int32_t r;
 
-	r = filecopy(original,duplicate);
-	if( r==-1 )
+	r = filecopy(original, duplicate);
+	if( r == -1 )
+	{
 		puts("Unable to copy files");
+	}
 	else
-		printf("%s copied to %s\n",original,duplicate);
+	{
+		printf("%s copied to %s\n", original, duplicate);
+	}
 
-	return(0);
+	return EXIT_SUCCESS;
 }

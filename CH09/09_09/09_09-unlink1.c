@@ -1,15 +1,22 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <stdint.h>
 #include <unistd.h>
 
-int main()
+
+int32_t main()
 {
-	int r;
+	int32_t r;
 
 	r = unlink("delete_me.txt");
 	if( r == 0 )
+	{
 		puts("File deleted");
+	}
 	else
+	{
 		puts("Something went wrong!");
+	}
 
-	return(0);
+	return EXIT_SUCCESS;
 }

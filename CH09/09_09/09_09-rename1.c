@@ -1,15 +1,21 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <stdint.h>
 
-int main()
+
+int32_t main()
 {
-	int r;
+	int32_t r;
 
-	r = rename("alpha.txt","a.txt");
+	r = rename("alpha.txt", "a.txt");
 	if( r == 0 )
+	{
 		puts("Rename operation successful");
+	}
 	else
+	{
 		puts("Rename failed");
+	}
 
-	return(0);
+	return EXIT_SUCCESS;
 }
-

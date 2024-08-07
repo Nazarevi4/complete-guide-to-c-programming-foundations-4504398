@@ -1,13 +1,16 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <stdint.h>
 #include <unistd.h>
 
-int main()
+
+int32_t main()
 {
 	char path[512];
 
 	chdir("..");
-	getcwd(path,512);
-	printf("This program is running in the %s directory\n",path);
+	getcwd(path, 512);
+	printf("This program is running in the %s directory\n", path);
 
-	return(0);
+	return EXIT_SUCCESS;
 }

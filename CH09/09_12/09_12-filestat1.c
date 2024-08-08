@@ -1,19 +1,20 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <stdint.h>
 #include <sys/stat.h>
 #include <time.h>
 
-int main()
+
+int32_t main()
 {
 	const char filename[] = "alpha.txt";
 	struct stat fstat;
 
-	stat(filename,&fstat);
+	stat(filename, &fstat);
 	printf("%s is %ld bytes long\n",
 			filename,
-			fstat.st_size
-		  );
-	printf("It was modified on %s",ctime(&fstat.st_mtime));
+			fstat.st_size);
+	printf("It was modified on %s", ctime(&fstat.st_mtime));
 
-	return(0);
+	return EXIT_SUCCESS;
 }
-

@@ -1,7 +1,10 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <stdint.h>
 #include <dirent.h>
 
-int main()
+
+int32_t main()
 {
 	DIR *directory;
 	struct dirent *file;
@@ -16,11 +19,12 @@ int main()
 
 	/* do something */
 	while( (file=readdir(directory)) != NULL )
-		printf("Found the file %s\n",file->d_name);
+	{
+		printf("Found the file %s\n", file->d_name);
+	}
 
 	/* close the directory */
 	closedir(directory);
 
-	return(0);
+	return EXIT_SUCCESS;
 }
-

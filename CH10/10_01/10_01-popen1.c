@@ -1,20 +1,23 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <stdint.h>
 
-int main()
+
+int32_t main()
 {
 	FILE *p;
-	int c;
+	int32_t c;
 
 	/* open the process */
-	p = popen("uname","r");	/* linux */
+	p = popen("uname", "r");	/* linux */
 	if( p == NULL )
 	{
 		puts("Unable to create process");
-		return(1);
+		return (1);
 	}
 
 	/* read from the process */
-	while( (c=fgetc(p)) != EOF )
+	while( (c = fgetc(p)) != EOF )
 	{
 		putchar(c);
 	}
@@ -22,6 +25,5 @@ int main()
 	/* close the process */
 	pclose(p);
 
-	return(0);
+	return EXIT_SUCCESS;
 }
-

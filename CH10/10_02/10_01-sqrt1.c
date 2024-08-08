@@ -1,16 +1,18 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <stdint.h>
 #include <math.h>
 
-int main()
+
+int32_t main()
 {
 	double a = 4294967296.0;
 
 	while(a >= 2.0)
 	{
-		printf("%.f\n",a);
+		printf("%.f\n", a);
 		a = sqrt(a);
 	}
 
-	return(0);
+	return EXIT_SUCCESS;
 }
-

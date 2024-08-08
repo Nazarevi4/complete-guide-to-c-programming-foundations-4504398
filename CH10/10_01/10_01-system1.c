@@ -1,12 +1,14 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdint.h>
 
-int main()
+
+int32_t main()
 {
 	printf("Press Enter to clear the screen: ");
 	getchar();
 	system("clear");	/* linux */
 	puts("Thank you");
 
-	return(0);
+	return EXIT_SUCCESS;
 }

@@ -1,9 +1,12 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <stdint.h>
 #include <dirent.h>
 #include <sys/stat.h>
 #include <time.h>
 
-int main()
+
+int32_t main()
 {
 	DIR *directory;
 	struct dirent *file;
@@ -14,24 +17,22 @@ int main()
 	if( directory == NULL )
 	{
 		puts("Unable to open current directory");
-		return(1);
+		return (1);
 	}
 
 	/* do something */
 	printf("%-25s %-10s %s\n","Filename","Size","Timestamp");
 	while( (file=readdir(directory)) != NULL )
 	{
-		stat(file->d_name,&fstat);
+		stat(file->d_name, &fstat);
 		printf("%25s %10lld ",
 				file->d_name,
-				fstat.st_size
-			  );
-		printf("%s",ctime(&fstat.st_mtime));
+				fstat.st_size);
+		printf("%s", ctime(&fstat.st_mtime));
 	}
 
 	/* close the directory */
 	closedir(directory);
 
-	return(0);
+	return EXIT_SUCCESS;
 }
-

@@ -1,7 +1,10 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <stdint.h>
 #include <dirent.h>
 
-int main()
+
+int32_t main()
 {
 	DIR *directory;
 
@@ -10,7 +13,7 @@ int main()
 	if( directory == NULL )
 	{
 		puts("Unable to open current directory");
-		return(1);
+		return (1);
 	}
 
 	/* do something */
@@ -19,5 +22,5 @@ int main()
 	/* close the directory */
 	closedir(directory);
 
-	return(0);
+	return EXIT_SUCCESS;
 }

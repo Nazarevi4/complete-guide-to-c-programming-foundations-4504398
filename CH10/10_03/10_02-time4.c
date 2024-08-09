@@ -1,7 +1,10 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <stdint.h>
 #include <time.h>
 
-int main()
+
+int32_t main()
 {
 	time_t now;
 	struct tm *timestamp;
@@ -21,9 +24,7 @@ int main()
 			weekday[timestamp->tm_wday],
 			month[timestamp->tm_mon],
 			timestamp->tm_mday,
-			timestamp->tm_year+1900
-		  );
+			timestamp->tm_year + 1900);
 
-	return(0);
+	return EXIT_SUCCESS;
 }
-

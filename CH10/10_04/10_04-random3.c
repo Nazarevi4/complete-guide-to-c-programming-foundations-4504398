@@ -3,7 +3,7 @@
 #include <stdint.h>
 
 
-int main()
+int32_t main()
 {
 	int32_t r;
 	unsigned s;

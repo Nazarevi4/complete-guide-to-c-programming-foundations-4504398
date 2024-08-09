@@ -1,30 +1,33 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdint.h>
 #include <time.h>
+
 
 #define SIZE 100
 
-int main()
+
+int32_t main()
 {
-	int list[SIZE];
-	int a,b,temp;
+	int32_t list[SIZE];
+	int32_t a, b, temp;
 
 	/* seed the randomizer */
 	srand( (unsigned)time(NULL) );
 
 	/* build and display the random values */
-	printf("%d random values, unsorted:\n",SIZE);
-	for(a=0;a<SIZE;a++)
+	printf("%d random values, unsorted:\n", SIZE);
+	for(a = 0; a < SIZE; a++)
 	{
 		list[a] = rand() % 100 + 1;	/* values from 1 to 100 */
-		printf("%4d",list[a]);
+		printf("%4d", list[a]);
 	}
 	putchar('\n');
 
 	/* perform the bubble sort */
-	for(a=0;a<SIZE-1;a++)
+	for(a = 0; a < SIZE - 1; a++)
 	{
-		for(b=a+1;b<SIZE;b++)
+		for(b = a + 1; b < SIZE; b++)
 		{
 			/* if a > b, swap the values */
 			if( list[a] > list[b] )
@@ -37,11 +40,12 @@ int main()
 	}
 
 	/* display the sorted list */
-	printf("%d random values, sorted:\n",SIZE);
-	for(a=0;a<SIZE;a++)
-		printf("%4d",list[a]);
+	printf("%d random values, sorted:\n", SIZE);
+	for(a = 0; a < SIZE; a++)
+	{
+		printf("%4d", list[a]);
+	}
 	putchar('\n');
 
-	return(0);
+	return EXIT_SUCCESS;
 }
-

@@ -1,20 +1,22 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdint.h>
+
 
 int main()
 {
-	int x,r;
+	int32_t r;
 	unsigned s;
 
 	printf("Enter the seed: ");
-	scanf("%u",&s);
+	scanf("%u", &s);
 	srand(s);
 
-	for(x=0;x<10;x++)
+	for(uint8_t x = 0; x < 10; x++)
 	{
 		r = rand() % 100 + 1;
-		printf("%d\n",r);
+		printf("%d\n", r);
 	}
 
-	return(0);
+	return EXIT_SUCCESS;
 }

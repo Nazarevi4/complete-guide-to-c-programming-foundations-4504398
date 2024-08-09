@@ -1,7 +1,10 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <stdint.h>
 #include <time.h>
 
-int main()
+
+int32_t main()
 {
 	time_t now;
 	struct tm *timestamp;
@@ -11,9 +14,7 @@ int main()
 	printf("It's now %d:%02d:%02d\n",
 			timestamp->tm_hour,
 			timestamp->tm_min,
-			timestamp->tm_sec
-		  );
+			timestamp->tm_sec);
 
-	return(0);
+	return EXIT_SUCCESS;
 }
-

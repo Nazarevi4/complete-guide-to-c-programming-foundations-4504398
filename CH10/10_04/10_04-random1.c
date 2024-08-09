@@ -1,15 +1,17 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdint.h>
 
-int main()
+
+int32_t main()
 {
-	int x,r;
+	int32_t r;
 
-	for(x=0;x<10;x++)
+	for(uint8_t x = 0; x < 10; x++)
 	{
 		r = rand();
-		printf("%d\n",r);
+		printf("%d\n", r);
 	}
 
-	return(0);
+	return EXIT_SUCCESS;
 }
